@@ -17,3 +17,14 @@ code {
 li {
   list-style: none;
 }
+
+#root {
+  /* background-color: rgb(18, 123, 167); */
+  /* background-color: rgb(12, 112, 154); */
+  background-color: #454545;
+}
+
+.mainPic {
+  width: 100%;
+  filter: drop-shadow(6px 16px 18px rgba(0, 0, 0, 0.55));
+}

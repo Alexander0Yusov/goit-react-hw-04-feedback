@@ -3,6 +3,7 @@ import Section from './Section/Section';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Statistics from './Statistics/Statistics';
 import Notification from './Notification/Notification';
+import defaultImg from '../img/illustration.png';
 
 export const App = () => {
   const [good, setGood] = useState(0);
@@ -43,7 +44,8 @@ export const App = () => {
         color: '#010101',
       }}
     >
-      <Section title="Please leave feedback">
+      <Section title="Please leave feedback our clinic">
+        <img className="mainPic" src={defaultImg} alt="" />
         <FeedbackOptions
           options={{ good, neutral, bad }}
           onLeaveFeedback={handleButtonClick}
