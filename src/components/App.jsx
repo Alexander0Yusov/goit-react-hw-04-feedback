@@ -13,14 +13,15 @@ export const App = () => {
   const handleButtonClick = e => {
     const { name } = e.currentTarget;
 
-    if (name === 'good') {
-      setGood(good + 1);
-    }
-    if (name === 'neutral') {
-      setNeutral(neutral + 1);
-    }
-    if (name === 'bad') {
-      setBad(bad + 1);
+    switch (name) {
+      case 'good':
+        setGood(good + 1);
+        break;
+      case 'neutral':
+        setNeutral(neutral + 1);
+        break;
+      case 'bad':
+        setBad(bad + 1);
     }
   };
 
@@ -47,7 +48,7 @@ export const App = () => {
       <Section title="Please leave feedback our clinic">
         <img className="mainPic" src={defaultImg} alt="" />
         <FeedbackOptions
-          options={{ good, neutral, bad }}
+          options={Object.keys({ good, neutral, bad })}
           onLeaveFeedback={handleButtonClick}
         />
       </Section>
