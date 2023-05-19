@@ -22,6 +22,9 @@ export const App = () => {
         break;
       case 'bad':
         setBad(bad + 1);
+        break;
+      default:
+        console.log('hi');
     }
   };
 
